@@ -12,7 +12,9 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 
 WORKDIR /workdir
 
-RUN apt-get update
+RUN apt-get update && \
+    apt install -y dvipng texlive-latex-extra texlive-fonts-recommended cm-super && \
+    apt clean
 RUN apt-get -y install locales && \
     localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 
@@ -30,6 +32,7 @@ RUN python -m pip install --upgrade pip \
     && python -m pip install distance \
     && python -m pip install geopy \
     && python -m pip install folium \
+    && python -m pip install cartopy \
     && python -m pip install matplotlib \
     && python -m pip install japanize_matplotlib \
     && python -m pip install tz \
@@ -37,6 +40,7 @@ RUN python -m pip install --upgrade pip \
     && python -m pip install polars \
     && python -m pip install selenium \
     && python -m pip install SciencePlots \
+    && python -m pip install opencv-python \
     && python -m pip install jupyterlab
 
 #RUN python -m pip install webdriver_manager.chrome
