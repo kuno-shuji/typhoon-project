@@ -37,7 +37,7 @@ RUN python -m pip install --upgrade pip \
     && python -m pip install japanize_matplotlib \
     && python -m pip install tz \
     && python -m pip install datetime timedelta  \
-    && python -m pip install polars \
+    && python -m pip install polars==0.19.2 \
     && python -m pip install selenium \
     && python -m pip install SciencePlots \
     && python -m pip install opencv-python \
