@@ -13,7 +13,9 @@
 				"ms-python.python",
 				"MS-CEINTL.vscode-language-pack-ja",
 				"GrapeCity.gc-excelviewer",
-				"GitHub.copilot"
+				"GitHub.copilot",
+				"mhutchie.git-graph",
+				"eamodio.gitlens"
 			]
 		}
 	}
